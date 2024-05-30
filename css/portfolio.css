@@ -1,0 +1,970 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+/* all similar css */
+.heading {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.heading h3 {
+    color: rgb(82, 81, 81);
+    font-weight: normal;
+}
+
+.heading h1 {
+    font-size: 3rem;
+}
+
+/* main page css */
+
+#main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#nav {
+    height: 12%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+#nav img {
+    display: none;
+    width: 35px;
+}
+
+#nav h1 {
+    font-size: 2rem;
+}
+
+#nav ul {
+    display: flex;
+    gap: 3rem;
+}
+
+#nav ul li {
+    list-style: none;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(45, 45, 45);
+    position: relative;
+}
+
+#nav ul li a:hover {
+    color: black;
+}
+
+#nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+#nav ul li a:hover::before {
+    width: 100%;
+}
+
+/* here the hero section starts */
+#hero {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.heroprofile {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+#hero .herodetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.herodetails h3 {
+    color: rgb(82, 81, 81);
+}
+
+.herodetails h2 {
+    color: rgb(82, 81, 81);
+}
+
+.btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.btns .buttons {
+    width: 130px;
+    height: 60px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns .buttons:nth-child(2) {
+    background-color: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(48, 48, 48);
+}
+
+.socialIcon {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialIcon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* about section starts from here */
+#about {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#about h1 {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2rem;
+    height: 10%;
+}
+
+.downarrow {
+    width: 30px;
+    position: absolute;
+    top: 90%;
+    right: 2%;
+}
+
+.aboutmeContainer {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.aboutmeContainer .aboutdp {
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.aboutboxcontainer {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.aboutboxcontainer .boxcontainer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.aboutboxcontainer .boxcontainer .aboutbox {
+    width: 50%;
+    height: 85%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.aboutbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.aboutbox img {
+    width: 25px;
+}
+
+.textContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    word-spacing: 2px;
+}
+.textContainer span{
+    font-weight: bold;
+}
+
+/* experience section starts from here */
+#experience {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.expboxcontainer {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.expboxcontainer .expbox {
+    width: 40%;
+    height: 80%;
+    border: 2px solid black;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.expbox h1 {
+    width: 90%;
+    height: 10%;
+    text-align: center;
+    color: rgb(99, 98, 98);
+    font-size: 2rem;
+}
+
+.expbox .expdetailsbox {
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.expdetails {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.expdetails img {
+    width: 25px;
+}
+
+.details h3:nth-child(2) {
+    color: rgb(82, 81, 81);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* project section starts here */
+#projects {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projectContainer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.projectBox {
+    width: 350px;
+    height: 450px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 2px solid rgba(95, 95, 95, 0.899);
+}
+
+.projectBox img {
+    width: 280px;
+    height: 280px;
+    border-radius: 30px;
+}
+
+.projectBox .projectbtns {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.projectBox .projectbtns .buttons {
+    width: 110px;
+    height: 50px;
+    border: 2px solid rgba(95, 95, 95, 0.899);
+    background-color: #fff;
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.projectbtns .buttons:hover{
+    background-color: #cfcfcf;
+}
+
+/* contact me page starts from here */
+#contactme{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contactBoxCont{
+     width: 50%;
+     height: 12%;
+     border: 2px solid rgba(95, 95, 95, 0.899);
+     border-radius: 20vw;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+}
+.contactBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 80%;
+}
+.contactBox a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.contactemail{
+width: 55%;
+}
+.contactlinkdin{
+    width: 35%;
+}
+.contactBox img{
+   width: 35px;
+}
+.contactBox h2{
+   font-size: 1.5vw;
+   font-weight: normal;
+   text-decoration: none;
+   color: rgb(74, 74, 74);
+   cursor: pointer;
+}
+
+/* footer starts from here */
+#footer{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#footer h2{
+   width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 1rem;
+}
+#footer .footerLinks{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+.footerLinks li{
+    list-style: none;
+}
+.footerLinks li a{
+text-decoration: none;
+font-size: 1.5rem;
+color:rgb(65, 65, 65) ;
+}
+
+
+
+/* responsive css starting */
+@media (max-width:1400px){
+    .contactBoxCont{
+        width: 60%;
+        height: 12%;
+        border-radius: 20vw;
+   }
+   .contactBox{
+       gap: 1.5rem;
+   }
+   .contactBox a{
+    gap: 1.5rem;
+   }
+   .contactemail{
+   width: 55%;
+   height: 80%;
+   }
+   .contactlinkdin{
+       width: 35%;
+       height: 80%;
+   }
+   .contactBox img{
+      width: 45px;
+   }
+   .contactBox h2{
+      font-size: 2vw;
+      font-weight: normal;
+   }
+}
+
+
+
+@media (max-width:1200px) {
+    #nav {
+        justify-content: space-between;
+    }
+
+    #nav h1 {
+        margin-left: 40px;
+    }
+
+    #nav img {
+        display: block;
+        position: fixed;
+        right: 0;
+        margin-right: 30px;
+        z-index: 100;
+    }
+
+    #hamburger {
+        backdrop-filter: blur(59px);
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 40%;
+        height: 100%;
+        transition: right 0.3s ease-in-out;
+        border: 2px solid black;
+        z-index: 100;
+    }
+
+    #hamburger .allLinks {
+        width: 100%;
+        height: 100%;
+        margin-top: 120px;
+    }
+
+    #hamburger .allLinks ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hamburger .allLinks ul li {
+        width: 100%;
+        text-align: center;
+        background-color: rgba(218, 220, 220, 0.458);
+    }
+
+    #hamburger .allLinks ul li a {
+        font-size: 2rem;
+    }
+
+    #about h1 {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 4rem;
+        height: 10%;
+    }
+
+    .aboutmeContainer {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .aboutmeContainer .aboutdp {
+        width: 400px;
+        height: 400px;
+        border-radius: 30px;
+    }
+
+    .aboutboxcontainer {
+        width: 80%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .aboutboxcontainer .boxcontainer {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1.5rem;
+    }
+
+    .aboutboxcontainer .boxcontainer .aboutbox {
+        width: 50%;
+        height: 80%;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .aboutbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2.5vw;
+    }
+
+    .textContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 3vw;
+    }
+
+    .downarrow {
+        width: 40px;
+        top: 90%;
+        right: 2%;
+    }
+
+    .expboxcontainer {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .expboxcontainer .expbox {
+        width: 60%;
+        height: 80%;
+        border: 2px solid black;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .expbox .expdetailsbox {
+        width: 100%;
+        height: 80%;
+        display: grid;
+    }
+
+    .expdetails .details h3 {
+        font-size: 2.2vw;
+    }
+    .expbox h1 {
+        font-size: 1.7rem;
+    }
+
+    .expdetails {
+        gap: 1rem;
+    }
+
+    #about {
+        margin-top: 8rem;
+        height: auto;
+    }
+
+    #experience {
+        margin-top: 8rem;
+    }
+
+    #projects {
+        margin-top: 8rem;
+        height: auto;
+        padding: 20px;
+    }
+
+    .contactBoxCont{
+        width: 70%;
+        height: 12%;
+        border-radius: 20vw;
+   }
+   .contactBox{
+       gap: 1.5rem;
+   }
+   .contactBox a{
+    gap: 1.5rem;
+   }
+   .contactemail{
+   width: 60%;
+   height: 80%;
+   }
+   .contactlinkdin{
+       width: 30%;
+       height: 80%;
+   }
+   .contactBox img{
+      width: 45px;
+   }
+   .contactBox h2{
+      font-size: 2.5vw;
+   }
+
+}
+
+@media (max-width:750px) {
+    #hero {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .heroprofile {
+        width: 300px;
+        height: 300px;
+    }
+
+    #about h1 {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 3rem;
+        height: 5%;
+    }
+
+    .aboutmeContainer {
+        width: 100%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .aboutmeContainer .aboutdp {
+        width: 300px;
+        height: 300px;
+        border-radius: 30px;
+    }
+
+    .aboutboxcontainer {
+        width: 80%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .aboutboxcontainer .boxcontainer {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+
+    .aboutboxcontainer .boxcontainer .aboutbox {
+        width: 80%;
+        height: 80%;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+
+    .aboutbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 3vw;
+    }
+
+    .textContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 4vw;
+    }
+
+    .downarrow {
+        display: none;
+    }
+
+    .expboxcontainer {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .expboxcontainer .expbox {
+        width: 90%;
+        height: 80%;
+        border: 2px solid black;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .expbox .expdetailsbox {
+        width: 100%;
+        height: 80%;
+        display: grid;
+    }
+
+    .expdetails .details h3 {
+        font-size: 3.5vw;
+    }
+    .expbox h1 {
+        font-size: 1.2rem;
+    }
+    .contactBoxCont{
+        width: 85%;
+        height: 10%;
+        border-radius: 20vw;
+   }
+   .contactBox{
+       gap: 0.5rem;
+   }
+   .contactBox a{
+    gap: 0.5rem;
+   }
+   .contactemail{
+   width: auto;
+   height: 80%;
+   }
+   .contactlinkdin{
+       width: auto;
+       height: 80%;
+   }
+   .contactBox img{
+      width: 30px;
+   }
+   .contactBox h2{
+      font-size: 3.5vw;
+      font-weight: normal;
+   } 
+
+   #footer .footerLinks{
+    width: 100%;
+    height: 70%;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.footerLinks li a {
+    font-size: 1.5rem;
+}
+#footer h2{
+    font-size: 0.8rem;
+}
+}
+
+@media (max-width:400px) {
+    #about h1 {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 2rem;
+        height: 8%;
+    }
+
+    .downarrow {
+        display: none;
+    }
+
+    .aboutmeContainer {
+        width: 100%;
+        height: 92%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .aboutmeContainer .aboutdp {
+        width: 250px;
+        height: 250px;
+        border-radius: 30px;
+    }
+
+    .aboutboxcontainer {
+        width: 80%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .aboutboxcontainer .boxcontainer {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 0.5rem;
+    }
+
+    .aboutboxcontainer .boxcontainer .aboutbox {
+        width: 100%;
+        height: 80%;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+
+    .aboutbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .textContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 5vw;
+    }
+
+    .projectBox {
+        width: 300px;
+        height: 400px;
+    }
+
+    .projectBox img {
+        width: 250px;
+        height: 250px;
+    }
+    .contactBox img{
+        width: 25px;
+     }
+    #footer{
+        gap: 0.2rem;
+    }
+    #footer .footerLinks{
+        width: 60%;
+        height: 70%;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width:600px) {
+    #hamburger {
+        width: 100%;
+        height: 100%;
+    }
+    .footerLinks li a {
+        font-size: 1rem;
+    }
+    
+}
